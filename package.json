@@ -16,7 +16,7 @@
     "@babel/polyfill": "^7.12.1",
     "@babel/runtime-corejs3": "^7.24.5",
     "@mybricks/comlib-pc-normal": "^1.5.95",
-    "@mybricks/renderer-pc": "^1.0.9",
+    "@mybricks/renderer-pc": "^1.0.11",
     "core-js": "^3.37.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"

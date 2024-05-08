@@ -5,12 +5,12 @@ import './index.css'
 const a = 10
 const App: React.FC = () => {
     const testRef = useRef()
-    const map = new Map()
-    map.set('sss', 111)
+
     const handleClick = () => {
       const flatRes = ['a', 'b', 'c', 'd', 5, [ 'e', 'f', 'g'], ['h', 'i']].flat()
       const index =  flatRes.findIndex(i => i  === 'h')
-      console.log('doubledNumbers squaredArray', flatRes, index)
+      let s = 'lallalala'
+      console.log('doubledNumbers squaredArray', flatRes, index, s.padEnd(2, '1'))
     }
     const handleSetSource = useCallback(() => {
       console.log('设置数据源')

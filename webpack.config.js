@@ -15,13 +15,13 @@ module.exports = {
     rules: [
       {
         test: /\.(tsx|ts|js)?$/,
+        // 排除@Mybricks下面的包，只有@Mybricks/下面的包被处理
         exclude: /node_modules\/(?!(@mybricks)\/).*/,
         use: {
           loader: "babel-loader",
           options: {
             presets: [
               "@babel/preset-react",
-            //   '@babel/preset-env',
               [
                 "@babel/preset-env",
                 {
