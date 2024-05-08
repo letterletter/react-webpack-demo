@@ -21,15 +21,15 @@ module.exports = {
           options: {
             presets: [
               "@babel/preset-react",
-              '@babel/preset-env',
-            //   [
-            //     "@babel/preset-env",
-            //     {
-            //       useBuiltIns: "usage",
-            //       corejs: 3,
-            //       targets: "> 0.25%, not dead",
-            //     },
-            //   ],
+            //   '@babel/preset-env',
+              [
+                "@babel/preset-env",
+                {
+                  useBuiltIns: "usage",
+                  corejs: 3,
+                  targets: "> 0.25%, not dead",
+                },
+              ],
               "@babel/preset-typescript",
             ],
             plugins: [
