@@ -15,8 +15,10 @@ module.exports = {
     rules: [
       {
         test: /\.(tsx|ts|js)?$/,
+        include: [path.resolve(__dirname,'src'), /node_modules\/(@mybricks|simple-ts-letter-f1)\/.*/],
         // 排除@Mybricks下面的包，只有@Mybricks/下面的包被处理
-        exclude: /node_modules\/(?!(@mybricks)\/).*/,
+        // exclude: /node_modules\/(?!(@mybricks)\/).*/,
+        // exclude: /node_modules\/(?!(@mybricks|simple-ts-letter-f1)\/).*/,
         use: {
           loader: "babel-loader",
           options: {
@@ -59,6 +61,10 @@ module.exports = {
       {
         test: /.css$/, //匹配 css 文件
         use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(xml|txt|html|cjs|theme)$/i,
+        use: [{ loader: 'raw-loader' }],
       },
     ],
   },
